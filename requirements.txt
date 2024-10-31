@@ -1,0 +1,78 @@
+# Core Requirements
+requests>=2.31.0
+python-dateutil>=2.8.2
+flask>=3.0.2
+sqlalchemy>=2.0.27
+psutil>=5.9.8
+
+# Email and MIME Handling
+email-validator>=2.1.0.post1
+aiosmtplib>=3.0.1
+dnspython>=2.6.1
+validate-email>=1.3.1
+
+# Tor and Network
+stem>=1.8.2
+PySocks>=1.7.1
+urllib3>=2.2.0
+cryptography>=42.0.2
+certifi>=2024.2.2
+
+# Database
+SQLite-Utils>=3.35.1
+alembic>=1.13.1
+PyMySQL>=1.1.0
+
+# Security
+bcrypt>=4.1.2
+PyJWT>=2.8.0
+python-jose>=3.3.0
+passlib>=1.7.4
+pyOpenSSL>=24.0.0
+
+# Parsing and Data Handling
+beautifulsoup4>=4.12.3
+lxml>=5.1.0
+pytz>=2024.1
+python-magic>=0.4.27
+python-multipart>=0.0.9
+
+# HTML and Template Processing
+Jinja2>=3.1.3
+Markdown>=3.5.2
+premailer>=3.10.0
+html2text>=2024.2.22
+
+# Progress and CLI
+tqdm>=4.66.2
+click>=8.1.7
+colorama>=0.4.6
+rich>=13.7.0
+
+# Monitoring and Logging
+prometheus-client>=0.19.0
+statsd>=4.0.1
+python-json-logger>=2.0.7
+
+# Development and Testing
+pytest>=8.0.1
+pytest-cov>=4.1.0
+black>=24.1.1
+flake8>=7.0.0
+mypy>=1.8.0
+isort>=5.13.2
+
+# Core Network and System
+psutil>=5.9.8
+requests>=2.31.0
+stem>=1.8.2
+pysocks>=1.7.1
+
+# Platform-specific Requirements
+pywin32>=306; platform_system=="Windows"
+
+# Version Requirements
+python_version >= "3.8"
+setuptools >= "69.1.0"
+wheel >= "0.42.0"
+pip >= "24.0"

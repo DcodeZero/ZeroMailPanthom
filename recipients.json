@@ -1,0 +1,15 @@
+{
+    "group_name": "Test Recipients Group",
+    "description": "List of recipients for email campaign",
+    "targets": 
+    [
+        {"email": "", "first_name": "", "last_name": ""}
+    ],
+    "metadata": {
+        "created_date": "2024-01-01",
+        "last_modified": "2024-01-01",
+        "version": "1.0",
+        "group_id": "G001",
+        "total_recipients": 5
+    }
+}

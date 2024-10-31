@@ -1,0 +1,172 @@
+{
+    "use_api": false,
+    "smtp": {
+        "host": "",
+        "port": "",
+        "username": "",
+        "password": "",
+        "from_address": {
+            "email": "",
+            "name": "",
+            "reply_to": ""
+        }
+    },
+    "api": {
+        "api_key": "your_api_key",
+        "api_url": "https://api.emailservice.com/v1/send",
+        "from_address": {
+            "email": "noreply@yourcompany.com",
+            "name": "Company Name",
+            "reply_to": "support@yourcompany.com"
+        },
+        "timeout": 30,
+        "max_batch_size": 100
+    },
+    "sandbox_evasion": {
+        "enabled": false,
+        "confidence_threshold": 70
+    },
+    "ngrok": {
+        "enabled": true,
+        "auth_token": "",
+        "tunnel_config": {
+            "port": 8080
+        }
+    },
+    "tor": {
+        "enabled": false,
+        "socks_port": 9050,
+        "control_port": 9051,
+        "control_password": null,
+        "cookie_authentication": true,
+        "cookie_path": "/var/run/tor/control.authcookie",
+        "circuit_refresh_interval": 1000,
+        "circuit_build_timeout": 10,
+        "force_tor": false,
+        "check_ip": true,
+        "retry_attempts": 5,
+        "retry_delay": 8
+    },
+    "tracking": {
+        "enabled": true,
+        "database_path": "data/tracking.db",
+        "domain": "127.0.0.1",
+        "pixel_tracking": true,
+        "link_tracking": true,
+        "store_user_agent": true,
+        "store_ip_address": false,
+        "retention_days": 90,
+        "sanitize_data": true,
+        "endpoints": {
+            "pixel": "/pixel",
+            "click": "/click",
+            "unsubscribe": "/unsubscribe"
+        }
+    },
+    "template_directory": "templates",
+    "attachment_directory": "attachments",
+    "urls": {
+        "landing_page": "https://yourcompany.com/welcome",
+        "unsubscribe": "https://yourcompany.com/unsubscribe",
+        "privacy_policy": "https://yourcompany.com/privacy",
+        "terms": "https://yourcompany.com/terms"
+    },
+    "email_settings": {
+        "batch_size": 50,
+        "delay_between_batches": 5,
+        "delay_between_emails": 1,
+        "max_retries": 3,
+        "retry_delay": 5,
+        "max_attachment_size": 10485760,
+        "allowed_attachment_types": [
+            "application/pdf",
+            "image/jpeg",
+            "image/png",
+            "application/msword",
+            "application/vnd.openxmlformats-officedocument.wordprocessingml.document"
+        ],
+        "max_recipients_per_day": 2000,
+        "rate_limiting": {
+            "enabled": true,
+            "max_per_hour": 500,
+            "max_per_minute": 30
+        }
+    },
+    "security": {
+        "encrypt_attachments": true,
+        "sign_emails": true,
+        "dkim_enabled": true,
+        "spf_check": true,
+        "validate_recipients": true,
+        "block_disposable_emails": true,
+        "allowed_domains": ["*"],
+        "blocked_domains": [
+            "tempmail.com",
+            "throwawaymail.com"
+        ],
+        "ip_whitelist": [],
+        "ip_blacklist": []
+    },
+    "notification": {
+        "enabled": true,
+        "notify_on": [
+            "campaign_start",
+            "campaign_complete",
+            "high_bounce_rate",
+            "error"
+        ],
+        "notification_email": "admin@yourcompany.com",
+        "alert_thresholds": {
+            "bounce_rate": 5,
+            "spam_complaint_rate": 0.1,
+            "unsubscribe_rate": 1
+        }
+    },
+    "logging": {
+        "log_file": "email_sender.log",
+        "log_level": "INFO",
+        "rotate_logs": true,
+        "max_log_size": 5242880,
+        "backup_count": 3,
+        "log_format": "%(asctime)s - %(levelname)s - %(message)s",
+        "log_directory": "logs",
+        "separate_error_log": true,
+        "log_to_console": true
+    },
+    "privacy": {
+        "anonymize_ip_addresses": true,
+        "encrypt_tracking_data": true,
+        "data_retention_policy": {
+            "tracking_data_days": 90,
+            "analytics_data_days": 365,
+            "log_data_days": 30
+        },
+        "gdpr_compliance": true,
+        "ccpa_compliance": true
+    },
+    "retry_policy": {
+        "soft_bounces": {
+            "max_retries": 3,
+            "delay_between_retries": 3600
+        },
+        "hard_bounces": {
+            "max_retries": 0,
+            "auto_suppress": true
+        },
+        "connection_errors": {
+            "max_retries": 5,
+            "delay_between_retries": 300
+        }
+    },
+    "campaign_defaults": {
+        "unsubscribe_header": true,
+        "list_unsubscribe_header": true,
+        "add_tracking_pixel": true,
+        "track_links": true,
+        "include_preview_text": true,
+        "default_language": "en",
+        "time_zone": "UTC",
+        "respect_time_zone": true,
+        "max_campaign_duration": 86400
+    }
+}
